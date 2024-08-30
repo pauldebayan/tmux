@@ -1,0 +1,84 @@
+tmux -> Create session
+exit -> Close session
+
+Ctrl+B and Press : -> Command Mode
+
+
+## Session:
+
+### Create:
+
+Command Mode and Type 'new'
+
+### Rename:
+
+Ctrl+B and Press $ 
+[0] -> [New Name]
+* -> Current session open
+
+### Navigation:
+
+Ctrl+B and Press '(' Back  or ')' Next
+
+### Open:
+(From normal terminal)
+tmux at -t "session name" [Here 'at' is Attach] or tmux a [Recently used]
+
+Note: "tmux" will create a new session
+
+
+### Kill:
+(From normal terminal)
+tmux kill-session -t 'session name'
+
+### Kill All Sessions:
+tmux kill-server
+
+## Window:
+[One session - Multiple windows]
+
+### Create:
+
+Ctrl+B and Press C
+
+### Rename:
+
+Ctrl+B and Press ,
+
+### Navigation:
+
+Ctrl+B and Press 'P' Previous or 'N' Next
+Notice the asterisk
+
+### Close:
+exit
+
+
+
+
+## Pane Manipulation:
+[One session - multiple windows, 
+One window - multiple tabs(pane)]
+
+### Vertically/Horizontally:
+Ctrl+B and Press '%' or '"'
+
+### View tab number:
+Ctrl+B and Press 'Q'
+
+### Navigation:
+Ctrl+B and Press 'Arrow key'
+
+### Change Layout:
+Ctrl+B and Press 'Spacebar'
+
+### Resize a tab:
+Command Mode and Type -
+resize-pane -L/R/U/D 20
+[Here 20 is points] 
+
+tmux ls -> Total sessions open
+
+Ctrl+B and Press D -> Get back to normal terminal [Detach]
+
+Ctrl+B and Press S -> View all the sessions
